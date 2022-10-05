@@ -13,6 +13,9 @@ public class Book {
     }
 
     void print() {
+        System.out.println(title);
+        System.out.println();
+        System.out.println();
         for (String string : body) {
             System.out.println(string);
             System.out.println();
