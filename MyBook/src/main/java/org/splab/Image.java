@@ -1,14 +1,14 @@
 package org.splab;
 
 
-public class Image {
+public class Image implements Element {
     private final String imageName;
 
     Image(String imageName) {
         this.imageName = imageName;
     }
 
-    void print() {
+    public void print() {
         System.out.printf("Image name: %s\n", imageName);
     }
 }

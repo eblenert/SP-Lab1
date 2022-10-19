@@ -1,13 +1,13 @@
 package org.splab;
 
-public class Paragraph {
+public class Paragraph implements Element {
     private final String text;
 
     Paragraph(String text) {
         this.text = text;
     }
 
-    void print() {
+    public void print() {
         System.out.println(text);
     }
 }

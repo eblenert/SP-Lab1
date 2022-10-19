@@ -23,7 +23,7 @@ public class Book {
         return chapterList.get(chapterIndex);
     }
     void print() {
-        System.out.printf("Book title: %s", title);
+        System.out.printf("Book title: %s %n", title);
         author.print();
         System.out.println();
         for (Chapter c : chapterList) {
