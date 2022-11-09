@@ -1,14 +1,11 @@
 package org.splab;
 
-public class Paragraph implements Element {
-    private final String text;
+public class TableOfContents implements Element{
 
-    Paragraph(String text) {
-        this.text = text;
-    }
-
+    @Override
     public void print() {
-        System.out.println(text);
+        // TODO Auto-generated method stub
+        
     }
 
     @Override
@@ -28,4 +25,5 @@ public class Paragraph implements Element {
         // TODO Auto-generated method stub
         return null;
     }
+    
 }
