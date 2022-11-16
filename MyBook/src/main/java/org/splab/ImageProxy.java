@@ -1,34 +1,36 @@
 package org.splab;
 
-import java.util.concurrent.TimeUnit;
+public class ImageProxy implements Element {
+    String url;
+    Image realImage = null;
 
-public class Image implements Element {
-    private final String imageName;
-
-    Image(String imageName) {
-        this.imageName = imageName;
-
-        try {
-            TimeUnit.SECONDS.sleep(5);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    ImageProxy(String url) {
+        this.url = url;
     }
 
+    Image loadImage() {
+        if (realImage == null) {
+            realImage = new Image(url);
+        }
+
+        return realImage;
+    }
+
+    @Override
     public void print() {
-        System.out.printf("Image name: %s\n", imageName);
+        this.loadImage().print();
     }
 
     @Override
     public void add(Element e) {
         // TODO Auto-generated method stub
-
+        
     }
 
     @Override
     public void remove(Element e) {
         // TODO Auto-generated method stub
-
+        
     }
 
     @Override
@@ -36,4 +38,6 @@ public class Image implements Element {
         // TODO Auto-generated method stub
         return null;
     }
+
+    
 }
