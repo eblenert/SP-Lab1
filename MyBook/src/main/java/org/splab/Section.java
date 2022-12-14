@@ -35,4 +35,12 @@ public class Section implements Element {
     public Element get(Integer n) {
         return subElementList.get(n);
     }
+
+    @Override
+    public void accept(Visitor v) {
+        v.visitSection(this);
+        for ( Element e : subElementList) {
+            e.accept(v);
+        }
+    }
 }
