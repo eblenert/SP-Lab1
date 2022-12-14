@@ -1,6 +1,9 @@
 package org.splab;
 
+import java.util.List;
+
 public class TableOfContents implements Element{
+    private List<String> contents;
 
     @Override
     public void print() {
